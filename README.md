@@ -1,6 +1,6 @@
-# KISSHOME Traffic Logger
+# KISSHOME Traffic Recorder
 
-`kisshome-traffic-logger` is a software package that is intended for use in the KISSHOME project to collect network traffic from participants.
+`kisshome-traffic-logger` is a software package that is intended for use in the [KISSHOME research project](https://kisshome.de) to collect network traffic from participants.
 
 It uses the traffic capturing feature of AVM FritzBox routers to record network traffic from Smart Home devices in the local network, cache the recorded traffic as PCAP files locally until they have been successfully transmitted to the collection site.
 
@@ -98,3 +98,7 @@ kisshome_traffic_logger/
     └── sbin
         └── kisshome_traffic_loggerconfig                           # Initializes the configuration file /etc/kisshome/config.json
 ```
+
+## Funding
+
+KISSHOME (KI-gestützte & nutzerzentrierte Sicherheitslösung im Smart Home) is a research project by the Institute for Internet Security at the Westphalian University of Applied Sciences with ARIC Artificial Intelligence Center Hamburg e.V., and the Institut für Innovationsmarketing at the Technische Universität Hamburg. It is funded by the German ministry for research and education (Bundesministerium für Bildung und Forschung) under grant nr. 16KIS1653.
