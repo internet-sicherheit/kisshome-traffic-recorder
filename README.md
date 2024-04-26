@@ -69,9 +69,9 @@ kisshome_traffic_logger/
 │   └── prerm
 ├── etc
 │   ├── cron.d
-│   │   └── kisshome-traffic-logger-cron							# cron job to sync pcaps and remove stale/old files
+│   │   └── kisshome-traffic-logger-cron                            # cron job to sync pcaps and remove stale/old files
 │   ├── kisshome
-│   │   └── rsync_dst_hostkey										# SSH key of the server that receives the pcaps
+│   │   └── rsync_dst_hostkey                                       # SSH key of the server that receives the pcaps
 │   ├── sudoers.d
 │   │   └── kisshome                                                # Allows the user of the web interface to issue systemctl start/stop/... for the kisshome-traffic-logger.service
 │   └── systemd
