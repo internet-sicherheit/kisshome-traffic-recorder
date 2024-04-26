@@ -16,7 +16,7 @@ wget -O - https://kisshome-deb.if-is.net/install.sh | bash -
 
 ## Design
 
-The tool is packaged as a Debian package named [`kisshome-traffic-logger`](kisshome-traffic-logger) intended for Raspberry Pi OS based on Debian 12 Bookworm.
+The tool is packaged as a Debian package named `kisshome-traffic-logger` intended for Raspberry Pi OS based on Debian 12 Bookworm.
 It contains components for
 
 1. recording the traffic via [`kisshome-traffic-logger.sh`](kisshome_traffic_logger/usr/bin/kisshome-traffic-logger.py), and 
