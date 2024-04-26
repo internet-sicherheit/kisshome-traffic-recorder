@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+    
+# Start the service after installation
+
+systemctl disable kisshome-traffic-logger.service
+systemctl stop kisshome-traffic-logger.service
+
+systemctl disable kisshome-web-config.service
+systemctl stop kisshome-web-config.service
+
+#deluser kisshome wireshark
+
+exit 0

@@ -1,0 +1,9 @@
+Source: kisshome-traffic-logger
+Version: 0.0.11
+Build-Depends: debhelper (>= 9)
+Maintainer: Gerhard Senkowski <senkowski@internet-sicherheit.de
+Package: kisshome-traffic-logger
+Architecture: all
+Description: This program captures network traffic using the AVM FritzBox capture functionality and uploads the captured files regularly.
+Depends: curl, wget, tshark, cron, rsync, python3, python3-flask
+Pre-Depends: systemd

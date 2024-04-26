@@ -1,0 +1,30 @@
+kisshome-traffic-logger (0.0.10) unstable; urgency=low
+
+  [Chris Dietrich]
+  * switch bpf filter ORing of mac addresses to ether host a || b || c...
+  -- Chris Dietrich <dietrich@internet-sicherheit.de>  Mon, 19 Feb 2024 15:25:02 +2
+
+kisshome-traffic-logger (0.0.9) unstable; urgency=low
+
+  [Chris Dietrich]
+  * added the interface config setting which sets the interface to capture on
+  -- Chris Dietrich <dietrich@internet-sicherheit.de>  Fri, 16 Feb 2024 18:06:22 +2
+
+kisshome-traffic-logger (0.0.8) unstable; urgency=low
+
+  [Chris Dietrich]
+  * added the filtered_macs config setting which allows to record traffic from
+    a set of MAC addresses only
+  -- Chris Dietrich <dietrich@internet-sicherheit.de>  Fri, 16 Feb 2024 17:35:56 +2
+
+kisshome-traffic-logger (0.0.5) unstable; urgency=low
+
+  [Gerhard Senkowski]
+  * switch to ramdisk to local pcap storage
+  -- Gerhard Senkowski <senkowski@internet-sicherheit.de>  Tue, 15 Dec 2023 17:39:56 +2
+
+kisshome-traffic-logger (0.0.1) unstable; urgency=low
+
+  [Gerhard Senkowski]
+  * initial version
+  -- Gerhard Senkowski <senkowski@internet-sicherheit.de>  Tue, 25 Sep 2023 17:39:56 +2

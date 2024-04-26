@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = "purge" ]; then
+echo "Even a --purge won't remove the logged traffic, you need to do that manually"
+rm -rf  /etc/kisshome
+rm -rf  /var/log/kisshome
+fi

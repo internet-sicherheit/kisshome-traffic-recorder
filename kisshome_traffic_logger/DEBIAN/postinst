@@ -1,0 +1,45 @@
+#!/bin/bash
+set -e
+
+# Create a user named `kisshome` unless already exists
+if ! id kisshome >/dev/null 2>&1; then
+    useradd kisshome --system -M
+fi
+mkdir -p /var/lib/traffic-logger/hourly_pcaps
+mkdir -p /var/log/kisshome
+
+# Make sure that the user kisshome owns most of the files that belong to our package
+chown -R kisshome /srv/www/kisshome_web
+chown -R kisshome /etc/kisshome
+chown -R kisshome /etc/ssh/kisshome_known_hosts
+chown -R kisshome /var/lib/traffic-logger
+chown -R kisshome /var/log/kisshome
+
+# Allow the user kisshome (used by the web interface) to start/stop the traffic-logger
+# via sudo systemctl start kisshome-traffic-logger.service
+chmod 0440 /etc/sudoers.d/kisshome
+
+# Make sure that the crontab file has the correct permissions
+chmod 640 /etc/cron.d/kisshome-traffic-logger-cron
+
+# Add the ssh host key of the server to known hosts
+# No longer needed as we store the host keys in a file /etc/kisshome/rsync_dst_hostkey in the package
+#ssh-keyscan -H kisshome-experiments.if-is.net >> /etc/kisshome/rsync_dst_hostkey
+
+# Create a default configuration file
+/usr/sbin/kisshome_traffic_loggerconfig
+
+# Start the service(s) after installation
+systemctl --system daemon-reload
+
+# The naming convention for mount files is to use the mountpoint with / replaced by - , except for the first one, which is removed, real - must be replaced by \x2d and the \ has to be escaped when used in bash
+systemctl enable var-lib-traffic\\x2dlogger-hourly_pcaps.mount
+systemctl start var-lib-traffic\\x2dlogger-hourly_pcaps.mount
+
+systemctl enable kisshome-web-config.service
+systemctl start kisshome-web-config.service
+
+#systemctl enable kisshome-traffic-logger.service
+#systemctl start kisshome-traffic-logger.service
+
+exit 0

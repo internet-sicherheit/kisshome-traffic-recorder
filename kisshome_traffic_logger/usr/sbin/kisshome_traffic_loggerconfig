@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Create a default config file but only if none exists or if --force is given.
+# When upgrading the software, the existing config will not be touched.
+if ! [ -f /etc/kisshome/config.json ] || [ "$1" = "--force" ] 
+then
+    echo "{
+        \"fritz_ip\": \"192.168.178.1\",
+        \"fritz_username\": \"admin\",
+        \"fritz_password\": \"\",
+        \"filtered_macs\": \"\",
+        \"interface\": \"\"
+    }" > /etc/kisshome/config.json
+    chown -R kisshome /etc/kisshome
+fi

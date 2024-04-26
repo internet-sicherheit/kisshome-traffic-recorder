@@ -1,0 +1,13 @@
+# .------------------------------------ minute (0 - 59)
+# |     .------------------------------ hour (0 - 23)
+# |     |       .---------------------- day of month (1 - 31)
+# |     |       |       .-------------- month (1 - 12) OR jan,feb,mar,apr ...
+# |     |       |       |       .------ day of week (0 - 6) (Sunday is usually 0)
+# |     |       |       |       |
+# *     *       *       *       *       user command to be executed
+
+# Sync recordings at 5 minutes past full hour
+  5     *       *       *       *       kisshome /usr/bin/kisshome-traffic-logger-sync.sh 2>&1 | logger -t kisshome-traffic-logger-sync
+
+# Clear recordings to avoid full disk/ramdisk
+ 15     *       *       *       *       kisshome /usr/bin/kisshome-clear-cache.py 2>&1 | logger -t kisshome-cache

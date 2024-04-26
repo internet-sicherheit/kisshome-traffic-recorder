@@ -1,0 +1,1 @@
+kisshome  ALL=(ALL) NOPASSWD: /bin/systemctl start kisshome-traffic-logger.service, /bin/systemctl stop kisshome-traffic-logger.service, /bin/systemctl enable kisshome-traffic-logger.service, /bin/systemctl disable kisshome-traffic-logger.service
