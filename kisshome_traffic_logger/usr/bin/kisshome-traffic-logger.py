@@ -88,7 +88,7 @@ capture_url = fritzboxip + f'/cgi-bin/capture_notimeout?ifaceorminor={iface}&sna
 #   -q      quiet, no output
 #   -b interval:3600    rotate pcap file every 3600 seconds (once per hour)
 #   -b nametimenum:2    make start time part before running number part (e.g. log_20210828164426_00001.pcap)
-capture_command = f'wget --no-check-certificate --timeout 0 -qO- "{capture_url}" | tshark -i - -q -b interval:3600 -b nametimenum:2 -w /var/lib/traffic-logger/hourly_pcaps/traffic.pcap'
+capture_command = f'wget --no-check-certificate --timeout 90 -qO- "{capture_url}" | tshark -i - -q -b interval:3600 -b nametimenum:2 -w /var/lib/traffic-logger/hourly_pcaps/traffic.pcap'
 
 subprocess.call(capture_command, shell=True)
 

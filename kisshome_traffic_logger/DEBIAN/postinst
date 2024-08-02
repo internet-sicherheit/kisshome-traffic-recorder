@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Set the path to your SSH key
+SSH_KEY="/etc/kisshome/kisshomekey"
+
 # Create a user named `kisshome` unless already exists
 if ! id kisshome >/dev/null 2>&1; then
     useradd kisshome --system -M
@@ -8,10 +11,17 @@ fi
 mkdir -p /var/lib/traffic-logger/hourly_pcaps
 mkdir -p /var/log/kisshome
 
+# Create an SSH key pair unless there is one already
+if [ ! -f "$SSH_KEY" ]; then
+  echo "SSH key not found. Generating a new SSH key pair at $SSH_KEY."
+  ssh-keygen -t ed25519 -f "$SSH_KEY" -N ""
+else
+  echo "SSH key $SSH_KEY already exists. No action needed."  
+fi
+
 # Make sure that the user kisshome owns most of the files that belong to our package
 chown -R kisshome /srv/www/kisshome_web
 chown -R kisshome /etc/kisshome
-chown -R kisshome /etc/ssh/kisshome_known_hosts
 chown -R kisshome /var/lib/traffic-logger
 chown -R kisshome /var/log/kisshome
 
