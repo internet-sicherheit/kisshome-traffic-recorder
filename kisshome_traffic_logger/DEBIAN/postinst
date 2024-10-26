@@ -4,9 +4,9 @@ set -e
 # Set the path to your SSH key
 SSH_KEY="/etc/kisshome/kisshomekey"
 
-# Create a user named `kisshome` unless already exists
+# Create a user named `kisshome` unless already exists, with home directory
 if ! id kisshome >/dev/null 2>&1; then
-    useradd kisshome --system -M
+    useradd kisshome --system -m
 fi
 mkdir -p /var/lib/traffic-logger/hourly_pcaps
 mkdir -p /var/log/kisshome
