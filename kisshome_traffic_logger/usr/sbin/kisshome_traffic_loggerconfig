@@ -9,7 +9,7 @@ then
         \"fritz_username\": \"admin\",
         \"fritz_password\": \"\",
         \"filtered_macs\": \"\",
-        \"interface\": \"\"
+        \"interface\": \"1-lan\"
     }" > /etc/kisshome/config.json
     chown -R kisshome /etc/kisshome
 fi
