@@ -1,3 +1,10 @@
+kisshome-traffic-logger (0.0.14) unstable; urgency=low
+
+  [Chris Dietrich]
+  * automatic ssh keypair generation, timeout for rsync, remote user for rsync
+    dst
+  -- Chris Dietrich <dietrich@internet-sicherheit.de>  Mon, 02 Aug 2024 15:25:02 +2
+
 kisshome-traffic-logger (0.0.10) unstable; urgency=low
 
   [Chris Dietrich]
