@@ -13,6 +13,10 @@ On the Raspberry Pi, download and invoke the script [`install.sh`](install.sh) a
 wget -O - https://kisshome-deb.if-is.net/install.sh | bash -
 ```
 
+Check whether all components of traffic-logger are running:
+```sh
+pi@raspberrypi:~ $ sudo systemctl status kisshome-web-config.service var-lib-traffic\\x2dlogger-hourly_pcaps.mount kisshome-traffic-logger.service
+```
 
 ## Design
 
