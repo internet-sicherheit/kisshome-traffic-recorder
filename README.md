@@ -52,7 +52,13 @@ Configuration is done via a config file named `/etc/kisshome/config.json`, and c
     // The web interface checks whether the credentials are correct before saving.
     // Invalid credentials typically leed to account suspension on the FritzBox.
     "fritz_username": "admin",
-    "fritz_password": "XXX"
+    "fritz_password": "XXX",
+    // A list of MAC addresses for devices for which traffic should be recorded
+    "filtered_macs": "48:55:19:aa:bb:cc,...,0c:dc:7e:aa:bb:cc",
+    // The internal interface name in the Fritz!OS to capture packets from. 
+    // Typically 1-lan.
+    // See https://kisshome-research.if-is.net/#/faq/interface
+    "interface": "1-lan"
 }
 ```
 
