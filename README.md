@@ -111,4 +111,4 @@ kisshome_traffic_logger/
 
 ## Funding
 
-KISSHOME (KI-gestützte & nutzerzentrierte Sicherheitslösung im Smart Home) is a research project by the [Institute for Internet Security](https://www.internet-sicherheit.de) at the Westphalian University of Applied Sciences with ARIC Artificial Intelligence Center Hamburg e.V., and the Institut für Innovationsmarketing at the Technische Universität Hamburg. It is funded by the German ministry for research and education (Bundesministerium für Bildung und Forschung) under grant nr. 16KIS1653.
+[KISSHOME](https://kisshome-research.if-is.net/) (KI-gestützte & nutzerzentrierte Sicherheitslösung im Smart Home) is a research project by the [Threat Lab](https://threatlab.if-is.net) research group of the [Institute for Internet Security](https://www.internet-sicherheit.de) at the Westphalian University of Applied Sciences with ARIC Artificial Intelligence Center Hamburg e.V., and the Institut für Innovationsmarketing at the Technische Universität Hamburg. It is funded by the German ministry for research and education (Bundesministerium für Bildung und Forschung) under grant no. 16KIS1653.
